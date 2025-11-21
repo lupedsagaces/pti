@@ -44,15 +44,9 @@ sudo pti.sh
 ### Método 2: Download direto
 
 ```bash
-wget https://raw.githubusercontent.com/lupedsagaces/pti/main/pti.sh
+wget https://raw.githubusercontent.com/lupedsagaces/pti/refs/heads/master/pti.sh
 chmod +x pti.sh
 sudo pti.sh
-```
-
-### Método 3: One-liner
-
-```bash
-curl -sL https://raw.githubusercontent.com/lupedsagaces/pti/main/pti.sh | sudo bash
 ```
 
 ## 📁 Estrutura de Diretórios
