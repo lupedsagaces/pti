@@ -22,7 +22,14 @@ Um script automatizado para instalação de ferramentas essenciais de pentest/re
 | **NetExec (nxc)** | Pós-exploração de rede | pipx |
 | **Mimikatz** | Extração de credenciais Windows | GitHub Release |
 | **getJS** | Extrator de arquivos JavaScript | Go |
+| **ffuf** | Ferramenta de fuzzing | Go |
 | **Burp Suite Community** | Proxy e scanner web | Instalador oficial |
+
+### 📝 Wordlists
+
+- dirb
+- rockyou
+- seclists
 
 ## ⚙️ Requisitos
 

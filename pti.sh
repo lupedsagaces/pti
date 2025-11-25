@@ -47,7 +47,7 @@ apt install -y \
     unzip p7zip-full \
     net-tools dnsutils \
     freerdp2-x11 \
-    opencl-headers ocl-icd-libopencl1 ocl-icd-opencl-dev pipx
+    opencl-headers ocl-icd-libopencl1 ocl-icd-opencl-dev pipx gzip
 
 # =============================================================================
 # Nmap
@@ -248,6 +248,44 @@ apt install -y net-tools
 log_success "net-tools instalado (inclui funcionalidades nbstat)"
 
 # =============================================================================
+# ffuf
+# =============================================================================
+log_info "Instalando ffuf..."
+go install github.com/ffuf/ffuf/v2@latest
+log_success "ffuf instalado"
+
+# =============================================================================
+# seclists
+# =============================================================================
+log_info "Instalando wordlists..."
+log_info "Instalando seclists..."
+git clone https://github.com/danielmiessler/SecLists.git
+sudo mkdir -p /usr/share/seclists
+sudo mv ./SecLists/* /usr/share/seclists
+sudo rm -r ./SecLists
+log_success "seclists instalado"
+
+# =============================================================================
+# dirb
+# =============================================================================
+log_info "Instalando dirb..."
+git clone https://gitlab.com/kalilinux/packages/dirb.git
+sudo mkdir -p /usr/share/wordlists
+sudo mv ./dirb/wordlists/* /usr/share/wordlists
+sudo rm -r ./dirb
+log_success "dirb instalado"  
+
+# =============================================================================
+# rockyou
+# =============================================================================
+log_info "Instalando rockyou..."
+git clone https://gitlab.com/kalilinux/packages/wordlists.git
+cd ./wordlists
+gzip -d rockyou.txt.gz
+sudo mv ./rockyou.txt /usr/share/wordlists
+sudo rm -r ../wordlists
+
+# =============================================================================
 # Limpeza
 # =============================================================================
 log_info "Limpando cache..."
@@ -279,6 +317,9 @@ echo "  - Responder: responder ou python3 $TOOLS_DIR/Responder/Responder.py"
 echo "  - NetExec (nxc): nxc"
 echo "  - getJS: getJS"
 echo "  - Go: go"
+echo "  - ffuf: ffuf"
+echo "Wordlists instaladas:"
+echo "  - seclists, dirb e rockyou"
 echo ""
 echo "Ferramentas em $TOOLS_DIR:"
 echo "  - Mimikatz: $TOOLS_DIR/mimikatz/"
