@@ -187,7 +187,7 @@ else
 fi
 
 # =============================================================================
-# Go (usando seu repositório)
+# Go (usando script lupedsagaces)
 # =============================================================================
 log_info "Instalando Go by script lupedsagaces..."
 cd "$TOOLS_DIR"
