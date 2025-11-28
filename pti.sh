@@ -278,7 +278,7 @@ log_info "Instalando wordlists..."
 log_info "Instalando seclists..."
 git clone https://github.com/danielmiessler/SecLists.git
 sudo mkdir -p /usr/share/seclists
-sudo mv ./SecLists/* /usr/share/seclists
+sudo cp -r ./SecLists/* /usr/share/seclists/
 sudo rm -r ./SecLists
 log_success "seclists instalado"
 
