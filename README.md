@@ -17,13 +17,15 @@ Um script automatizado para instalação de ferramentas essenciais de pentest/re
 | **hashid** | Identificador de hashes | pip |
 | **Impacket** | Biblioteca de protocolos de rede | pipx |
 | **Hashcat** | Cracking de hashes (GPU) | apt |
-| **John the Ripper** | Cracking de hashes (Jumbo) | apt/source |
+| **John the Ripper** | Cracking de hashes (Jumbo) | github |
 | **Responder** | LLMNR/NBT-NS/mDNS poisoner | GitHub |
 | **NetExec (nxc)** | Pós-exploração de rede | pipx |
 | **Mimikatz** | Extração de credenciais Windows | GitHub Release |
 | **getJS** | Extrator de arquivos JavaScript | Go |
 | **ffuf** | Ferramenta de fuzzing | Go |
 | **Burp Suite Community** | Proxy e scanner web | Instalador oficial |
+| **sqlmap** | Exploração SQL | apt |
+| **metasploit framework** | Pentesting framework | github |
 
 ### 📝 Wordlists
 

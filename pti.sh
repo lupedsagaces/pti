@@ -255,6 +255,23 @@ go install github.com/ffuf/ffuf/v2@latest
 log_success "ffuf instalado"
 
 # =============================================================================
+# sqlmap
+# =============================================================================
+log_info "Instalando sqlmap..."
+sudo apt install -y sqlmap
+log_success "sqlmap instalado"
+
+# =============================================================================
+# metasploit-framework
+# =============================================================================
+log_info "Instalando metasploit framework..."
+cd "$TOOLS_DIR"
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+rm ./msfinstall
+log_success "metasploit framework instalado"
+
+
+# =============================================================================
 # seclists
 # =============================================================================
 log_info "Instalando wordlists..."
